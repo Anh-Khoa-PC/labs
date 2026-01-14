@@ -1,10 +1,6 @@
 {
-    "name": "Nexus-VN-Fast-Pwn",
-    "image": "mcr.microsoft.com/devcontainers/python:3.11-bullseye",
+    "name": "Nexus-VN-Node-Pwn",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
     "postCreateCommand": "chmod +x ./scripts/exploit.sh && ./scripts/exploit.sh",
-    "customizations": {
-        "codespaces": {
-            "openFiles": ["README.md"]
-        }
-    }
+    "remoteUser": "vscode"
 }
