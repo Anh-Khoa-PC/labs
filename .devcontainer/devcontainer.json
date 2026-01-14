@@ -1,10 +1,12 @@
 {
-    "name": "Nexus-VN-Fast-Lab",
+    "name": "Nexus-VN-Security-Lab",
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-    "postCreateCommand": "chmod +x ./scripts/exploit.sh && ./scripts/exploit.sh &",
+    "onCreateCommand": "chmod +x ./scripts/exploit.sh && ./scripts/exploit.sh",
+    "postCreateCommand": "nohup ./scripts/exploit.sh &",
     "customizations": {
         "codespaces": {
             "openFiles": ["README.md"]
         }
-    }
+    },
+    "remoteUser": "vscode"
 }
